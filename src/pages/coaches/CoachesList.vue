@@ -10,3 +10,13 @@
     </ul>
   </section>
 </template>
+
+<script>
+export default {
+  computed: {
+    filteredCoach() {
+      return this.store.getters['coaches/coaches'];
+    },
+  },
+};
+</script>
