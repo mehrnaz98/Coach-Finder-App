@@ -2,10 +2,10 @@
   <li>
     <h3>{{ fullName }}</h3>
     <h4>${{ rate }}/hour</h4>
+    <div>
+      <span v-for="area in areas" :key="area">{{ area }}</span>
+    </div>
   </li>
-  <div>
-    <span v-for="area in areas" :key="area">{{ area }}</span>
-  </div>
   <router-link to="coachContactLink">Contact</router-link>
   <router-link to="coachDetailsLink">View Details</router-link>
 </template>
