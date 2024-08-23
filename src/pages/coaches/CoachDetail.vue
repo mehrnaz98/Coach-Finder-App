@@ -35,5 +35,10 @@ export default {
       selectedCoach: null,
     };
   },
+  created() {
+    this.selectedCoach = this.$store.getters['coaches/coaches'].find(
+      (coach) => coach.id === this.id
+    );
+  },
 };
 </script>
