@@ -13,6 +13,7 @@
         :first-name="coach.firstName"
         :last-name="coach.lastName"
         :rate="coach.hourlyRate"
+        :areas="coach.areas"
       ></coach-item>
     </ul>
     <h3 v-else>No coaches found</h3>
