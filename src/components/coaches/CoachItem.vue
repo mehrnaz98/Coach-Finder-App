@@ -1,6 +1,6 @@
 <template>
   <li>
-    <h3>{{ fullname }}</h3>
+    <h3>{{ fullName }}</h3>
     <h4>${{ rate }}/hour</h4>
   </li>
   <div>
@@ -15,7 +15,7 @@ export default {
   props: ['id', 'firstName', 'lastName', 'rate', 'areas'],
   computed: {
     fullName() {
-      return this.firstName + '' + this.lastName;
+      return this.firstName + ' ' + this.lastName;
     },
     coachContactLink() {
       return this.$route.path + this.id + '/contact';
