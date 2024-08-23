@@ -28,7 +28,7 @@ export default {
     };
   },
   methods: {
-    setFilter() {},
+    setFilter(event) {},
   },
 };
 </script>
