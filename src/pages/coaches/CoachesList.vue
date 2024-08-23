@@ -4,7 +4,7 @@
     <base-card>
       <div class="controls">
         <base-button>Refresh</base-button>
-        <router-link to="/register">Register as Coach</router-link>
+        <base-button link to="/register">Register as Coach</base-button>
       </div>
       <ul v-if="hasCoaches">
         <coach-item
