@@ -2,7 +2,7 @@
   <button v-if="!link">
     <slot></slot>
   </button>
-  <router-link v-else>
+  <router-link v-else :to="to">
     <Slot></Slot>
   </router-link>
 </template>
