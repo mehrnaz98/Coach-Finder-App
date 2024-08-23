@@ -6,8 +6,8 @@
   <div>
     <span v-for="area in areas" :key="area">{{ area }}</span>
   </div>
-  <router-link to="/coaches/c1/contact">Contact</router-link>
-  <router-link to="/coaches/c1">View Details</router-link>
+  <router-link to="coachContactLink">Contact</router-link>
+  <router-link to="coachDetailsLink">View Details</router-link>
 </template>
 
 <script>
@@ -21,7 +21,7 @@ export default {
       return this.$route.path + this.id + '/contact';
     },
     coachDetailsLink() {
-      return this.$route.path + this.is;
+      return this.$route.path + this.id;
     },
   },
 };
