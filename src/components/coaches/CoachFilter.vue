@@ -1,6 +1,7 @@
 <template>
-  <base-card
-    ><h2>Find Your Coach</h2>
+  <base-card>
+    *9
+    <h2>Find Your Coach</h2>
     <span class="filter-option"
       ><input type="checkbox" id="frontend" checked />
       <label for="frontend">Frontend</label>
@@ -15,3 +16,17 @@
     </span>
   </base-card>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      filters: {
+        frontend: true,
+        backend: true,
+        career: true,
+      },
+    };
+  },
+};
+</script>
