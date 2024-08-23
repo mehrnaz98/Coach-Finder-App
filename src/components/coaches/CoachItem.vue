@@ -20,6 +20,9 @@ export default {
     coachContactLink() {
       return '/coaches' + this.id + '/contact';
     },
+    coachDetailsLink() {
+      return '/coaches' + this.is;
+    },
   },
 };
 </script>
