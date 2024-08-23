@@ -18,10 +18,10 @@ export default {
       return this.firstName + '' + this.lastName;
     },
     coachContactLink() {
-      return '/coaches' + this.id + '/contact';
+      return this.$route.path + this.id + '/contact';
     },
     coachDetailsLink() {
-      return '/coaches' + this.is;
+      return this.$route.path + this.is;
     },
   },
 };
