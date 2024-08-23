@@ -15,6 +15,11 @@ export default {
       required: false,
       default: false,
     },
+    to: {
+      type: String,
+      required: false,
+      default: '/',
+    },
   },
 };
 </script>
