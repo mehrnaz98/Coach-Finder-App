@@ -42,6 +42,9 @@ export default {
     areas() {
       return this.selectedCoach.areas;
     },
+    rate() {
+      return this.selectedCoach.hourlyRate;
+    },
     contactLink() {
       return this.$route.path + '/' + this.id + '/contact';
     },
