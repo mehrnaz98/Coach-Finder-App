@@ -1,8 +1,8 @@
 <template>
-  <button>
+  <button v-if="!link">
     <slot></slot>
   </button>
-  <router-link>
+  <router-link v-else>
     <Slot></Slot>
   </router-link>
 </template>
