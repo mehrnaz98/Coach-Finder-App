@@ -6,7 +6,14 @@
       <router-link to="/register">Register as Coach</router-link>
     </div>
     <ul v-if="hasCoaches">
-      <coach-item></coach-item>
+      <coach-item
+        v-for="coach in filteredCoaches"
+        :key="coach.id"
+        :id="coach.id"
+        :first-name="coach.firstName"
+        :last-name="coach.lastName"
+        :rate="coach.hourlyRate"
+      ></coach-item>
     </ul>
     <h3 v-else>No coaches found</h3>
   </section>
