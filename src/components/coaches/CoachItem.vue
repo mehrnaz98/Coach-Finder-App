@@ -6,7 +6,7 @@
       <span v-for="area in areas" :key="area">{{ area }}</span>
     </div>
   </li>
-  <base-button link to="coachContactLink">Contact</base-button>
+  <base-button link mode="outline" to="coachContactLink">Contact</base-button>
   <base-button link to="coachDetailsLink">View Details</base-button>
 </template>
 
