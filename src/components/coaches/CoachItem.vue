@@ -10,6 +10,12 @@
   <router-link to="/coaches/c1">View Details</router-link>
 </template>
 
+<script>
+export default {
+  props: ['id', 'firstName', 'lastName', 'rate', 'areas'],
+};
+</script>
+
 <style scoped>
 li {
   margin: 1rem 0;
