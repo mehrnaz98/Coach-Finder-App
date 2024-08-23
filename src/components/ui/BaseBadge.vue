@@ -7,5 +7,10 @@
 <script>
 export default {
   props: ['type', 'title'],
+  computed: {
+    text() {
+      return this.title.toUpperCase();
+    },
+  },
 };
 </script>
