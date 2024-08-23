@@ -48,6 +48,9 @@ export default {
     contactLink() {
       return this.$route.path + '/' + this.id + '/contact';
     },
+    description() {
+      return this.selectedCoach.description;
+    },
   },
 
   created() {
