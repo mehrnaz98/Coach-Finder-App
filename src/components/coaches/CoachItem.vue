@@ -17,6 +17,9 @@ export default {
     fullName() {
       return this.firstName + '' + this.lastName;
     },
+    coachContactLink() {
+      return '/coaches' + this.id + '/contact';
+    },
   },
 };
 </script>
