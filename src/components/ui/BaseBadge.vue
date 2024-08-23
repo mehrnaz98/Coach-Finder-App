@@ -3,3 +3,9 @@
     {{ text }}
   </span>
 </template>
+
+<script>
+export default {
+  props: ['type', 'title'],
+};
+</script>
