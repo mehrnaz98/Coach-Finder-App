@@ -13,6 +13,11 @@
 <script>
 export default {
   props: ['id', 'firstName', 'lastName', 'rate', 'areas'],
+  computed: {
+    fullName() {
+      return this.firstName + '' + this.lastName;
+    },
+  },
 };
 </script>
 
