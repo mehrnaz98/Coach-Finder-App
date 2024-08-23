@@ -28,7 +28,9 @@ export default {
     };
   },
   methods: {
-    setFilter(event) {},
+    setFilter(event) {
+      const inputId = event.target.id;
+    },
   },
 };
 </script>
