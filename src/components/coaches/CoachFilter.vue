@@ -27,5 +27,8 @@ export default {
       },
     };
   },
+  methods: {
+    setFilter() {},
+  },
 };
 </script>
