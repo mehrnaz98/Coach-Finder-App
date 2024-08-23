@@ -1,6 +1,5 @@
 <template>
   <base-card>
-    *9
     <h2>Find Your Coach</h2>
     <span class="filter-option"
       ><input type="checkbox" id="frontend" checked />
