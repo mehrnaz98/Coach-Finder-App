@@ -15,7 +15,9 @@ export default {
     CoachForm,
   },
   methods: {
-    saveData(data) {},
+    saveData(data) {
+      this.$store.dispatch('coaches/registerCoach', data);
+    },
   },
 };
 </script>
