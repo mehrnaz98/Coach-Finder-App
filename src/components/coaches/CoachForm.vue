@@ -43,7 +43,7 @@ export default {
       lastName: '',
       description: '',
       rate: null,
-      area: [],
+      areas: [],
     };
   },
 };
