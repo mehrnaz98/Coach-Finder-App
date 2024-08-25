@@ -46,5 +46,16 @@ export default {
       areas: [],
     };
   },
+  method: {
+    submitForm() {
+      const formData = {
+        first: this.firstName,
+        last: this.lastName,
+        desc: this.description,
+        rate: this.rate,
+        areas: this.areas,
+      };
+    },
+  },
 };
 </script>
