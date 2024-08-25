@@ -50,7 +50,9 @@ export default {
     },
   },
   methods: {
-    setFilters(updatedFilters) {},
+    setFilters(updatedFilters) {
+      this.activeFilters = updatedFilters;
+    },
   },
 };
 </script>
