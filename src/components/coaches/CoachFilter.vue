@@ -18,6 +18,7 @@
 
 <script>
 export default {
+  emit: ['change-filter'],
   data() {
     return {
       filters: {
@@ -36,6 +37,7 @@ export default {
         [inputId]: isActive,
       };
       this.filters = updatedFilters;
+      this.$emit('change-filter', updatedFilters);
     },
   },
 };
