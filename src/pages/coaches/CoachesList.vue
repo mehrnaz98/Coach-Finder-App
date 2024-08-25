@@ -30,6 +30,7 @@ import CoachFilter from '../../components/coaches/CoachFilter.vue';
 
 export default {
   components: { CoachItem, CoachFilter },
+
   computed: {
     filteredCoaches() {
       return this.$store.getters['coaches/coaches'];
@@ -37,6 +38,9 @@ export default {
     hasCoaches() {
       return this.$store.getters['coaches/hasCoaches'];
     },
+  },
+  methods: {
+    setFilters(updatedFilters) {},
   },
 };
 </script>
