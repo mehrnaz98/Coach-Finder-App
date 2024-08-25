@@ -46,7 +46,7 @@ export default {
       areas: [],
     };
   },
-  method: {
+  methods: {
     submitForm() {
       const formData = {
         first: this.firstName,
