@@ -31,6 +31,16 @@ import CoachFilter from '../../components/coaches/CoachFilter.vue';
 export default {
   components: { CoachItem, CoachFilter },
 
+  data() {
+    return {
+      activeFilters: {
+        frontend: true,
+        backend: true,
+        career: true,
+      },
+    };
+  },
+
   computed: {
     filteredCoaches() {
       return this.$store.getters['coaches/coaches'];
