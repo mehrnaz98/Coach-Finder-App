@@ -14,5 +14,8 @@ export default {
   components: {
     CoachForm,
   },
+  methods: {
+    saveData(data) {},
+  },
 };
 </script>
