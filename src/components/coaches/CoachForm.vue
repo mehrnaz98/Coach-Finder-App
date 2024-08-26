@@ -48,6 +48,7 @@ export default {
     };
   },
   methods: {
+    validateForm() {},
     submitForm() {
       const formData = {
         first: this.firstName,
