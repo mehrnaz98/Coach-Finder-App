@@ -2,32 +2,46 @@
   <form @submit.prevent="submitForm">
     <div class="form-control">
       <label for="firstName">Firstname</label>
-      <input type="text" id="firstName" v-model.trim="firstName" />
+      <input type="text" id="firstName" v-model.trim="firstName.val" />
     </div>
     <div class="form-control">
       <label for="lastName">Lastname</label>
-      <input type="text" id="lastName" v-model.trim="lastName" />
+      <input type="text" id="lastName" v-model.trim="lastName.val" />
     </div>
     <div class="form-control">
       <label for="description">Description</label>
-      <textarea id="description" row="5" v-model.trim="description"></textarea>
+      <textarea
+        id="description"
+        row="5"
+        v-model.trim="description.val"
+      ></textarea>
     </div>
     <div class="form-control">
       <label for="rate">Hourly Rate</label>
-      <input type="number" id="rate" v-model.number="rate" />
+      <input type="number" id="rate" v-model.number="rate.val" />
     </div>
     <div class="form-control">
       <h3>Areas of Expertise</h3>
       <div>
-        <input type="checkbox" id="frontend" value="frontend" v-model="areas" />
+        <input
+          type="checkbox"
+          id="frontend"
+          value="frontend"
+          v-model="areas.val"
+        />
         <label for="frontend">Frontend Development</label>
       </div>
       <div>
-        <input type="checkbox" id="Backend" value="Backend" v-model="areas" />
+        <input
+          type="checkbox"
+          id="Backend"
+          value="Backend"
+          v-model="areas.val"
+        />
         <label for="frontend">Backend Development</label>
       </div>
       <div>
-        <input type="checkbox" id="career" value="career" v-model="areas" />
+        <input type="checkbox" id="career" value="career" v-model="areas.val" />
         <label for="career">Career Advisory</label>
       </div>
     </div>
