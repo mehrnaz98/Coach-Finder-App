@@ -103,6 +103,9 @@ export default {
     },
     submitForm() {
       this.validateForm();
+      if (!this.formData) {
+        return;
+      }
       const formData = {
         first: this.firstName,
         last: this.lastName,
