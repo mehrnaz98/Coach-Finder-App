@@ -40,11 +40,26 @@ export default {
   emits: ['save-data'],
   data() {
     return {
-      firstName: '',
-      lastName: '',
-      description: '',
-      rate: null,
-      areas: [],
+      firstName: {
+        val: '',
+        isvalid: true,
+      },
+      lastName: {
+        val: '',
+        isvalid: true,
+      },
+      description: {
+        val: '',
+        isvalid: true,
+      },
+      rate: {
+        val: null,
+        isvalid: true,
+      },
+      areas: {
+        val: [],
+        isvalid: true,
+      },
       formIsValid: true,
     };
   },
