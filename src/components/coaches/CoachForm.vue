@@ -78,7 +78,29 @@ export default {
     };
   },
   methods: {
-    validateForm() {},
+    validateForm() {
+      this.formIsValid = true;
+      if (this.firstName.val === '') {
+        this.firstName.isValid = false;
+        this.formIsValid = false;
+      }
+      if (this.LastName.val === '') {
+        this.lastName.isValid = false;
+        this.formIsValid = false;
+      }
+      if (this.description.val === '') {
+        this.description.isValid = false;
+        this.formIsValid = false;
+      }
+      if (!this.rate.val || this.rate.val < 0) {
+        this.rate.isValid = false;
+        this.formIsValid = false;
+      }
+      if (this.areas.val.length === 0) {
+        this.areas.isValid = false;
+        this.formIsValid = false;
+      }
+    },
     submitForm() {
       this.validateForm();
       const formData = {
