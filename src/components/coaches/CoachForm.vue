@@ -60,19 +60,19 @@ export default {
       },
       lastName: {
         val: '',
-        isvalid: true,
+        isValid: true,
       },
       description: {
         val: '',
-        isvalid: true,
+        isValid: true,
       },
       rate: {
         val: null,
-        isvalid: true,
+        isValid: true,
       },
       areas: {
         val: [],
-        isvalid: true,
+        isValid: true,
       },
       formIsValid: true,
     };
