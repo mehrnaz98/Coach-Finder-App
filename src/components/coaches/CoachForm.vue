@@ -45,6 +45,7 @@ export default {
       description: '',
       rate: null,
       areas: [],
+      formIsValid: true,
     };
   },
   methods: {
