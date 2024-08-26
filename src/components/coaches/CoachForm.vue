@@ -103,7 +103,7 @@ export default {
     },
     submitForm() {
       this.validateForm();
-      if (!this.formData) {
+      if (!this.formIsValid) {
         return;
       }
       const formData = {
