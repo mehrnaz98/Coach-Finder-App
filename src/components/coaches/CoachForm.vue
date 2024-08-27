@@ -90,7 +90,7 @@ export default {
         this.firstName.isValid = false;
         this.formIsValid = false;
       }
-      if (this.LastName.val === '') {
+      if (this.lastName.val === '') {
         this.lastName.isValid = false;
         this.formIsValid = false;
       }
