@@ -45,6 +45,7 @@
         <label for="career">Career Advisory</label>
       </div>
     </div>
+    <p v-if="!formIsValid">Please fix the above errors and submit again</p>
     <base-button>Register</base-button>
   </form>
 </template>
