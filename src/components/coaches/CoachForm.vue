@@ -1,26 +1,30 @@
 <template>
   <form @submit.prevent="submitForm">
-    <div class="form-control">
+    <div class="form-control" :class="{ invalid: !firstName.isValid }">
       <label for="firstName">Firstname</label>
       <input type="text" id="firstName" v-model.trim="firstName.val" />
+      <p v-if="!firstName.isValid">First name must not be empty.</p>
     </div>
-    <div class="form-control">
+    <div class="form-control" :class="{ invalid: !lastName.isValid }">
       <label for="lastName">Lastname</label>
       <input type="text" id="lastName" v-model.trim="lastName.val" />
+      <p v-if="!lastName.isValid">Last name must not be empty.</p>
     </div>
-    <div class="form-control">
+    <div class="form-control" :class="{ invalid: !description.isValid }">
       <label for="description">Description</label>
       <textarea
         id="description"
         row="5"
         v-model.trim="description.val"
       ></textarea>
+      <p v-if="!description.isValid">Description must not be empty.</p>
     </div>
-    <div class="form-control">
+    <div class="form-control" :class="{ invalid: !rate.isValid }">
       <label for="rate">Hourly Rate</label>
       <input type="number" id="rate" v-model.number="rate.val" />
     </div>
-    <div class="form-control">
+    <p v-if="!rate.isValid">Rate must be greater than 0.</p>
+    <div class="form-control" :class="{ invalid: !areas.isValid }">
       <h3>Areas of Expertise</h3>
       <div>
         <input
@@ -44,6 +48,7 @@
         <input type="checkbox" id="career" value="career" v-model="areas.val" />
         <label for="career">Career Advisory</label>
       </div>
+      <p v-if="!areas.isValid">At least one expertise must be selected.</p>
     </div>
     <p v-if="!formIsValid">Please fix the above errors and submit again</p>
     <base-button>Register</base-button>
