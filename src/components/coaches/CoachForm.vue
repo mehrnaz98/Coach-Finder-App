@@ -62,7 +62,7 @@ export default {
     return {
       firstName: {
         val: '',
-        isvalid: true,
+        isValid: true,
       },
       lastName: {
         val: '',
