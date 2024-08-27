@@ -2,12 +2,22 @@
   <form @submit.prevent="submitForm">
     <div class="form-control" :class="{ invalid: !firstName.isValid }">
       <label for="firstName">Firstname</label>
-      <input type="text" id="firstName" v-model.trim="firstName.val" />
+      <input
+        type="text"
+        id="firstName"
+        v-model.trim="firstName.val"
+        @blur="clearValidity('firstName')"
+      />
       <p v-if="!firstName.isValid">First name must not be empty.</p>
     </div>
     <div class="form-control" :class="{ invalid: !lastName.isValid }">
       <label for="lastName">Lastname</label>
-      <input type="text" id="lastName" v-model.trim="lastName.val" />
+      <input
+        type="text"
+        id="lastName"
+        v-model.trim="lastName.val"
+        @blur="clearValidity('lastName')"
+      />
       <p v-if="!lastName.isValid">Last name must not be empty.</p>
     </div>
     <div class="form-control" :class="{ invalid: !description.isValid }">
@@ -16,12 +26,18 @@
         id="description"
         row="5"
         v-model.trim="description.val"
+        @blur="clearValidity('description')"
       ></textarea>
       <p v-if="!description.isValid">Description must not be empty.</p>
     </div>
     <div class="form-control" :class="{ invalid: !rate.isValid }">
       <label for="rate">Hourly Rate</label>
-      <input type="number" id="rate" v-model.number="rate.val" />
+      <input
+        type="number"
+        id="rate"
+        v-model.number="rate.val"
+        @blur="clearValidity('rate')"
+      />
     </div>
     <p v-if="!rate.isValid">Rate must be greater than 0.</p>
     <div class="form-control" :class="{ invalid: !areas.isValid }">
@@ -32,6 +48,7 @@
           id="frontend"
           value="frontend"
           v-model="areas.val"
+          @blur="clearValidity('areas')"
         />
         <label for="frontend">Frontend Development</label>
       </div>
@@ -41,11 +58,18 @@
           id="Backend"
           value="Backend"
           v-model="areas.val"
+          @blur="clearValidity('areas')"
         />
         <label for="frontend">Backend Development</label>
       </div>
       <div>
-        <input type="checkbox" id="career" value="career" v-model="areas.val" />
+        <input
+          type="checkbox"
+          id="career"
+          value="career"
+          v-model="areas.val"
+          @blur="clearValidity('areas')"
+        />
         <label for="career">Career Advisory</label>
       </div>
       <p v-if="!areas.isValid">At least one expertise must be selected.</p>
