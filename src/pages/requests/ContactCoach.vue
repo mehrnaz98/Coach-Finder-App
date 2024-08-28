@@ -2,11 +2,11 @@
   <form @submit.prevent="submitForm">
     <div>
       <label for="email">Your E-Mail</label>
-      <input type="email" id="email" />
+      <input type="email" id="email" v-model.trim="email" />
     </div>
     <div>
       <label for="message">Message</label>
-      <textarea id="message" rows="5"></textarea>
+      <textarea id="message" rows="5" v-model.trim="message"></textarea>
     </div>
     <div class="actions">
       <base-button>Send Message</base-button>
