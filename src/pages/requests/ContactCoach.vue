@@ -11,6 +11,9 @@
     <div class="actions">
       <base-button>Send Message</base-button>
     </div>
+    <p class="error" v-if="!formIsValid">
+      Please enter a valid email and non-empty message.
+    </p>
   </form>
 </template>
 
