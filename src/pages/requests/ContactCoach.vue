@@ -1,1 +1,12 @@
-<template>Contact a Coach</template>
+<template>
+  <form>
+    <div>
+      <label for="email">Your E-Mail</label>
+      <input type="email" id="email" />
+    </div>
+    <div>
+      <label for="message">Message</label>
+      <textarea id="message" rows="5"></textarea>
+    </div>
+  </form>
+</template>
