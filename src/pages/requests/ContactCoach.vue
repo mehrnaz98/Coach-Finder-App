@@ -8,5 +8,8 @@
       <label for="message">Message</label>
       <textarea id="message" rows="5"></textarea>
     </div>
+    <div class="actions">
+      <base-button>Send Message</base-button>
+    </div>
   </form>
 </template>
