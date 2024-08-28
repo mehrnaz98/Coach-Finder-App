@@ -8,4 +8,6 @@ export default {
       requests: [],
     };
   },
+  mutations,
+  actions,
 };
