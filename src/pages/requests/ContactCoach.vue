@@ -24,7 +24,9 @@ export default {
     };
   },
   methods: {
-    submitForm() {},
+    submitForm() {
+      this.formIsValid = true;
+    },
   },
 };
 </script>
