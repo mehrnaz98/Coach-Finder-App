@@ -17,6 +17,8 @@ export default {
       }
     );
 
+    const responseData = await response.json();
+
     context.commit('registerCoach', coachData);
   },
 };
