@@ -19,6 +19,10 @@ export default {
 
     const responseData = await response.json();
 
+    if (!response.ok) {
+      // error ...
+    }
+
     context.commit('registerCoach', coachData);
   },
 };
