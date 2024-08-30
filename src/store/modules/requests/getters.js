@@ -1,5 +1,6 @@
 export default {
-  requests(state) {
+  requests(state, getters, rootState, rootGetters) {
+    const coachId = rootGetters.userId;
     return state.requests;
   },
   hasRequests(state) {
