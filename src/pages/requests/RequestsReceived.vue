@@ -26,7 +26,7 @@ export default {
   },
   computed: {
     receivedRequests() {
-      this.$store.getters['requests / requests'];
+      return this.$store.getters['requests / requests'];
     },
     hasRequests() {
       return this.$store.getters['requests/hasRequests'];
