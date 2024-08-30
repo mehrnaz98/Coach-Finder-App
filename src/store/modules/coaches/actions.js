@@ -17,7 +17,7 @@ export default {
       }
     );
 
-    const responseData = await response.json();
+    // const responseData = await response.json();
 
     if (!response.ok) {
       // error ...
