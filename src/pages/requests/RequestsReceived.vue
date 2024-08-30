@@ -13,7 +13,9 @@
 <script>
 export default {
   computed: {
-    receivedRequests() {},
+    receivedRequests() {
+      this.$store.getters['requests / requests'];
+    },
   },
 };
 </script>
