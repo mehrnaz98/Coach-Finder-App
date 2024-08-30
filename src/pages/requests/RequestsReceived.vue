@@ -11,6 +11,8 @@
 </template>
 
 <script>
+import RequestsItem from '../../components/requests/RequestsItem.vue';
+
 export default {
   computed: {
     receivedRequests() {
