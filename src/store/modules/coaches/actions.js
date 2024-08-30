@@ -1,5 +1,5 @@
 export default {
-  registerCoach(context, data) {
+  async registerCoach(context, data) {
     const userId = context.rootGetters.userId;
     const coachData = {
       firstName: data.first,
@@ -9,7 +9,7 @@ export default {
       areas: data.areas,
     };
 
-    fetch(
+    const response = await fetch(
       `https://find-a-coach-app-6891b-default-rtdb.firebaseio.com/coaches/${userId}.json`,
       {
         method: 'PUT',
