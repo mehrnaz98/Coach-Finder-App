@@ -16,6 +16,9 @@ export default {
     receivedRequests() {
       this.$store.getters['requests / requests'];
     },
+    hasRequests() {
+      return this.$store.getters['requests/hasRequests'];
+    },
   },
 };
 </script>
