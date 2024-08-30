@@ -23,6 +23,6 @@ export default {
       // error ...
     }
 
-    context.commit('registerCoach', coachData);
+    context.commit('registerCoach', { ...coachData, id: userId });
   },
 };
