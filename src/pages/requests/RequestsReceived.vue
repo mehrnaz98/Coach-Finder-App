@@ -14,6 +14,9 @@
 import RequestsItem from '../../components/requests/RequestsItem.vue';
 
 export default {
+  components: {
+    RequestsItem,
+  },
   computed: {
     receivedRequests() {
       this.$store.getters['requests / requests'];
