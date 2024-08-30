@@ -10,5 +10,10 @@
 <script>
 export default {
   props: ['email', 'message'],
+  computed: {
+    emailLink() {
+      return 'mailto:' + this.email;
+    },
+  },
 };
 </script>
