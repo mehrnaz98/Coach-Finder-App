@@ -10,7 +10,10 @@ export default {
     };
 
     fetch(
-      'https://find-a-coach-app-6891b-default-rtdb.firebaseio.com/coaches.json'
+      'https://find-a-coach-app-6891b-default-rtdb.firebaseio.com/coaches.json',
+      {
+        method: 'PUT',
+      }
     );
 
     context.commit('registerCoach', coachData);
