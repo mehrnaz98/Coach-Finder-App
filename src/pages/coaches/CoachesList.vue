@@ -35,6 +35,7 @@ export default {
 
   data() {
     return {
+      isLoading: false,
       activeFilters: {
         frontend: true,
         backend: true,
