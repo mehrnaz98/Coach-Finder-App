@@ -34,5 +34,17 @@ export default {
     if (!response.ok) {
       // Error..
     }
+
+    const coaches = [];
+
+    for (const key in responseData) {
+      const coach = {
+        firstName: responseData[key].firstName,
+        lastName: responseData[key].lastName,
+        description: responseData[key].description,
+        hourlyRate: responseData[key].hourlyRate,
+        areas: responseData[key].areas,
+      };
+    }
   },
 };
