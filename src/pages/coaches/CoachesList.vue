@@ -1,5 +1,5 @@
 <template>
-  <base-dialog :show="!!error">
+  <base-dialog :show="!!error" title="An error occured!">
     <p>
       {{ error }}
     </p>
