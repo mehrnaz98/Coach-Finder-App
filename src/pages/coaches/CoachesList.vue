@@ -13,7 +13,7 @@
       <div v-if="isLoading">
         <base-spinner></base-spinner>
       </div>
-      <ul v-if="hasCoaches">
+      <ul v-else-if="hasCoaches">
         <coach-item
           v-for="coach in filteredCoaches"
           :key="coach.id"
