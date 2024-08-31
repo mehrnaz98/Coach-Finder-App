@@ -74,9 +74,10 @@ export default {
     setFilters(updatedFilters) {
       this.activeFilters = updatedFilters;
     },
-    loadCoaches() {
+    async loadCoaches() {
       this.isLoading = true;
-      this.$store.dispatch('coaches/loadCoaches');
+      await this.$store.dispatch('coaches/loadCoaches');
+      this.isLoading = false;
     },
   },
 };
