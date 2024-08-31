@@ -10,6 +10,9 @@
           >Register as Coach</base-button
         >
       </div>
+      <div v-if="isLoading">
+        <base-spinner></base-spinner>
+      </div>
       <ul v-if="hasCoaches">
         <coach-item
           v-for="coach in filteredCoaches"
