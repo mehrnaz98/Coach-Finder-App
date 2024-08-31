@@ -70,6 +70,9 @@ export default {
     setFilters(updatedFilters) {
       this.activeFilters = updatedFilters;
     },
+    loadCoaches() {
+      this.$store.dispatch('coaches/loadCoaches');
+    },
   },
 };
 </script>
