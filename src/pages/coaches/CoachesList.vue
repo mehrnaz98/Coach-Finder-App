@@ -75,6 +75,7 @@ export default {
       this.activeFilters = updatedFilters;
     },
     loadCoaches() {
+      this.isLoading = true;
       this.$store.dispatch('coaches/loadCoaches');
     },
   },
