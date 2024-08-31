@@ -27,8 +27,10 @@ export default {
   },
   async loadCoaches(context, payload) {
     const response = await fetch(
-      `https://find-a-coach-app-6891b-default-rtdb.firebaseio.com/coaches/${userId}.json`
+      `https://find-a-coach-app-6891b-default-rtdb.firebaseio.com/coaches.json`
     );
+    const responseData = await response.json();
+
     if (!response.ok) {
       // Error..
     }
