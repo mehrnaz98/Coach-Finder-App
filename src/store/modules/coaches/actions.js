@@ -25,7 +25,7 @@ export default {
 
     context.commit('registerCoach', { ...coachData, id: userId });
   },
-  async loadCoaches(context, payload) {
+  async loadCoaches(context) {
     const response = await fetch(
       `https://find-a-coach-app-6891b-default-rtdb.firebaseio.com/coaches.json`
     );
