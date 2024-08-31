@@ -67,7 +67,7 @@ export default {
       });
     },
     hasCoaches() {
-      return this.$store.getters['coaches/hasCoaches'];
+      return !this.isLoading && this.$store.getters['coaches/hasCoaches'];
     },
   },
   created() {
