@@ -1,4 +1,9 @@
 <template>
+  <base-dialog>
+    <p>
+      {{ error }}
+    </p>
+  </base-dialog>
   <section>
     <coach-filter @change-filter="setFilters"></coach-filter>
   </section>
