@@ -20,6 +20,7 @@ export default {
     }
 
     newRequest.id = responseData.name;
+    newRequest.coachId = payload.coachId;
 
     context.commit('addRequest', newRequest);
   },
