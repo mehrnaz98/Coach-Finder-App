@@ -24,4 +24,7 @@ export default {
 
     context.commit('addRequest', newRequest);
   },
+  fetchRequest(context) {
+    const coachId = context.rootGetters.userId;
+  },
 };
