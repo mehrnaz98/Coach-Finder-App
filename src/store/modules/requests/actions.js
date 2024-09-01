@@ -26,5 +26,8 @@ export default {
   },
   fetchRequest(context) {
     const coachId = context.rootGetters.userId;
+    fetch(
+      `https://find-a-coach-app-6891b-default-rtdb.firebaseio.com/requests/${coachId}.json`
+    );
   },
 };
