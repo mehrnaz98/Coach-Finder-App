@@ -88,7 +88,7 @@ export default {
       try {
         await this.$store.dispatch('coaches/loadCoaches');
       } catch (error) {
-        this.error = error.message || 'Something went wrong';
+        this.error = error.message || 'Something went wrong!';
       }
       this.isLoading = false;
     },
