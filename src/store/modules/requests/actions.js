@@ -12,13 +12,13 @@ export default {
       }
     );
 
-    const responseData = await response.json();
-
     if (!response.ok) {
+      const responseData = await response.json();
       const error = new Error(responseData.message || 'Failed to send request');
       throw error;
     }
 
+    const responseData = await response.json();
     newRequest.id = responseData.name;
     newRequest.coachId = payload.coachId;
 
@@ -29,15 +29,16 @@ export default {
     const response = await fetch(
       `https://find-a-coach-app-6891b-default-rtdb.firebaseio.com/requests/${coachId}.json`
     );
-    const responseData = await response.json();
 
     if (!response.ok) {
+      const responseData = await response.json();
       const error = new Error(
         responseData.message || 'Failed to fetch requests.'
       );
       throw error;
     }
 
+    const responseData = await response.json();
     const requests = [];
 
     for (const key in responseData) {
