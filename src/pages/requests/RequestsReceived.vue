@@ -39,8 +39,10 @@ export default {
     },
   },
   method: {
-    loadRequests() {
-      this.$store.dispatch('requests/fetchRequests');
+    async loadRequests() {
+      this.isLoadingoading = true;
+      await this.$store.dispatch('requests/fetchRequests');
+      this.isLoadingoading = false;
     },
   },
 };
