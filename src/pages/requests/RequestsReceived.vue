@@ -49,7 +49,7 @@ export default {
   created() {
     this.loadRequests();
   },
-  method: {
+  methods: {
     async loadRequests() {
       this.isLoading = true;
       try {
