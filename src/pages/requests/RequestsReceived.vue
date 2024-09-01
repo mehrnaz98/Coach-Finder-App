@@ -9,6 +9,7 @@
       <header>
         <h2>Requests Received</h2>
       </header>
+      <base-spinner></base-spinner>
       <ul v-if="hasRequests">
         <requests-item
           v-for="req in receivedRequests"
@@ -24,10 +25,12 @@
 
 <script>
 import RequestsItem from '../../components/requests/RequestsItem.vue';
+import BaseSpinner from '../../components/ui/BaseSpinner.vue';
 
 export default {
   components: {
     RequestsItem,
+    BaseSpinner,
   },
   data() {
     return {
