@@ -47,6 +47,7 @@ export default {
         userEmail: responseData[key].userEmail,
         message: responseData[key].message,
       };
+      requests.push(request);
     }
   },
 };
