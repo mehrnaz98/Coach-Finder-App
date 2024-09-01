@@ -1,5 +1,9 @@
 <template>
-  <base-dialog :show="!!error" title="An error occured"></base-dialog>
+  <base-dialog
+    :show="!!error"
+    title="An error occured"
+    @close="handleError"
+  ></base-dialog>
   <section>
     <base-card>
       <header>
