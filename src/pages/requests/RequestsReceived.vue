@@ -52,7 +52,7 @@ export default {
       try {
         await this.$store.dispatch('requests/fetchRequests');
       } catch (error) {
-        error = error.message || 'Something failed';
+        error = error.message || 'Something failed!';
       }
       this.isLoading = false;
     },
