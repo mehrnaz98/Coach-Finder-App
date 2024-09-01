@@ -40,9 +40,13 @@ export default {
   },
   method: {
     async loadRequests() {
-      this.isLoadingoading = true;
-      await this.$store.dispatch('requests/fetchRequests');
-      this.isLoadingoading = false;
+      this.isLoading = true;
+      try {
+        await this.$store.dispatch('requests/fetchRequests');
+      } catch (error) {
+        error = error.message || 'Something failed';
+      }
+      this.isLoading = false;
     },
   },
 };
