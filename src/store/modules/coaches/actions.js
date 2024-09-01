@@ -29,6 +29,9 @@ export default {
     });
   },
   async loadCoaches(context) {
+    if (!context.getters.shouldUpdate) {
+      return;
+    }
     const response = await fetch(
       `https://find-a-coach-app-6891b-default-rtdb.firebaseio.com/coaches.json`
     );
