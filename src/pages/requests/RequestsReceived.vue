@@ -24,6 +24,11 @@ export default {
   components: {
     RequestsItem,
   },
+  data() {
+    return {
+      isLoading: false,
+    };
+  },
   computed: {
     receivedRequests() {
       return this.$store.getters['requests/requests'];
