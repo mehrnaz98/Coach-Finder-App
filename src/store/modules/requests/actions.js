@@ -49,5 +49,7 @@ export default {
       };
       requests.push(request);
     }
+
+    context.commit('setRequests', requests);
   },
 };
