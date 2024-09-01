@@ -23,7 +23,10 @@ export default {
       // error ...
     }
 
-    context.commit('registerCoach', { ...coachData, id: userId });
+    context.commit('registerCoach', {
+      ...coachData,
+      id: userId,
+    });
   },
   async loadCoaches(context) {
     const response = await fetch(
