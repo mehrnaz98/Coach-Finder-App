@@ -37,5 +37,16 @@ export default {
       );
       throw error;
     }
+
+    const requests = [];
+
+    for (const key in responseData) {
+      const request = {
+        id: key,
+        coachId: coachId,
+        userEmail: responseData[key].userEmail,
+        message: responseData[key].message,
+      };
+    }
   },
 };
