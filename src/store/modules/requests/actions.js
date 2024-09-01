@@ -15,6 +15,11 @@ export default {
 
     const responseData = await response.json();
 
+    if (!response.ok) {
+      const error = new Error(responseData.message || 'Failed to send request');
+      throw error;
+    }
+
     newRequest.id = responseData.name;
 
     context.commit('addRequest', newRequest);
