@@ -53,6 +53,9 @@ export default {
       }
       this.isLoading = false;
     },
+    handleError() {
+      this.error = null;
+    },
   },
 };
 </script>
