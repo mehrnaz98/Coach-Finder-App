@@ -24,10 +24,18 @@ export default {
 
     context.commit('addRequest', newRequest);
   },
-  fetchRequest(context) {
+  async fetchRequest(context) {
     const coachId = context.rootGetters.userId;
-    fetch(
+    const response = await fetch(
       `https://find-a-coach-app-6891b-default-rtdb.firebaseio.com/requests/${coachId}.json`
     );
+    const responseData = await response.json();
+
+    if (!response.ok) {
+      const error = new Error(
+        responseData.message || 'Failed to fetch request'
+      );
+      throw error;
+    }
   },
 };
