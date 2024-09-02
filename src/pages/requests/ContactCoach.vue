@@ -89,5 +89,6 @@ textarea:focus {
 
 .actions {
   text-align: center;
+  margin-top: 1rem;
 }
 </style>
