@@ -1,6 +1,8 @@
 <template>
   <the-header></the-header>
-  <router-view></router-view>
+  <router-view>
+    <transition name="route"></transition>
+  </router-view>
 </template>
 
 <script>
