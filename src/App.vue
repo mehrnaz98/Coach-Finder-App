@@ -1,7 +1,9 @@
 <template>
   <the-header></the-header>
-  <router-view>
-    <transition name="route"></transition>
+  <router-view v-slot="slotProps">
+    <transition name="route">
+      <component :is="slotProps.Component"></component>
+    </transition>
   </router-view>
 </template>
 
