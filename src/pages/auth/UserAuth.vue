@@ -28,7 +28,14 @@ export default {
     };
   },
   methods: {
-    submitForm() {},
+    submitForm() {
+      if (
+        this.email === '' ||
+        !this.email.includes('@') ||
+        this.password.length < 6
+      )
+        this.formIsValid = false;
+    },
     switchAuthMode() {},
   },
 };
