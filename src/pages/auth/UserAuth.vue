@@ -16,7 +16,16 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      email: '',
+      password: '',
+      formIsValid: true,
+      mode: 'login',
+    };
+  },
+};
 </script>
 
 <style scoped>
