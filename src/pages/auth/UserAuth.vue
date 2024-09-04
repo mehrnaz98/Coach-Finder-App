@@ -3,11 +3,11 @@
     <form @submit.prevent="submitForm">
       <div class="form-control">
         <label for="email">Email</label>
-        <input type="email" id="email" />
+        <input type="email" id="email" v-model="email" />
       </div>
       <div class="form-control">
         <label for="password">Password</label>
-        <input type="password" id="password" />
+        <input type="password" id="password" v-model="password" />
       </div>
       <base-button>Login</base-button>
       <base-button type="button" mode="flat" @click="switchAuthMode">
