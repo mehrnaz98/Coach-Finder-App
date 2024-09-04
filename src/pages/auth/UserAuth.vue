@@ -25,6 +25,10 @@ export default {
       mode: 'login',
     };
   },
+  methods: {
+    submitForm() {},
+    switchAuthMode() {},
+  },
 };
 </script>
 
