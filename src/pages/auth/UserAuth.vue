@@ -13,9 +13,9 @@
         Please enter a valid email and password (must be at least 6 characters
         long).
       </p>
-      <base-button>Login</base-button>
+      <base-button>{{ submitButtonCaption }}</base-button>
       <base-button type="button" mode="flat" @click="switchAuthMode">
-        Signup instead
+        {{ switchModeButtonCaption }}
       </base-button>
     </form>
   </base-card>
