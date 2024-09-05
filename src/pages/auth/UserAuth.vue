@@ -42,7 +42,13 @@ export default {
         this.formIsValid = false;
       return;
     },
-    switchAuthMode() {},
+    switchAuthMode() {
+      if (this.mode === 'login') {
+        this.mode = 'signup';
+      } else {
+        this.mode = 'login';
+      }
+    },
   },
 };
 </script>
