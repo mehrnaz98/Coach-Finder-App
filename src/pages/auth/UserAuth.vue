@@ -31,6 +31,22 @@ export default {
       mode: 'login',
     };
   },
+  computed: {
+    submitButtonCaption() {
+      if (this.mode === 'login') {
+        return 'Login';
+      } else {
+        return 'Signup';
+      }
+    },
+    switchModeButtonCaption() {
+      if (this.mode === 'login') {
+        return 'Signup instead';
+      } else {
+        return 'Login instead';
+      }
+    },
+  },
   methods: {
     submitForm() {
       this.formIsValid = true;
