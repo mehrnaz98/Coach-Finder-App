@@ -29,6 +29,7 @@ export default {
   },
   methods: {
     submitForm() {
+      this.formIsValid = true;
       if (
         this.email === '' ||
         !this.email.includes('@') ||
