@@ -8,6 +8,7 @@ const store = createStore({
   modules: {
     coaches: coachesModule,
     requests: requestsModule,
+    auth: authModule,
   },
   state() {
     return {
