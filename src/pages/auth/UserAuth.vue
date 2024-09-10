@@ -61,6 +61,8 @@ export default {
         return;
       }
 
+      this.isLoading = true;
+
       if (this.mode === 'login') {
         // ...
       } else {
@@ -69,6 +71,7 @@ export default {
           password: this.password,
         });
       }
+      this.isLoading = false;
     },
     switchAuthMode() {
       if (this.mode === 'login') {
