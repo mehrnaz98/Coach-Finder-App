@@ -50,7 +50,7 @@ export default {
     },
   },
   methods: {
-    submitForm() {
+    async submitForm() {
       this.formIsValid = true;
       if (
         this.email === '' ||
@@ -66,7 +66,7 @@ export default {
       if (this.mode === 'login') {
         // ...
       } else {
-        this.$store.dispatch('signup', {
+        await this.$store.dispatch('signup', {
           email: this.email,
           password: this.password,
         });
