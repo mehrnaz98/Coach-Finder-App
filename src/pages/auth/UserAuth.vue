@@ -1,5 +1,8 @@
 <template>
   <div>
+    <base-dialog :show="isLoading" title="Authenticating..." fixed>
+      <base-spinner></base-spinner>
+    </base-dialog>
     <base-card>
       <form @submit.prevent="submitForm">
         <div class="form-control">
