@@ -92,6 +92,9 @@ export default {
         this.mode = 'login';
       }
     },
+    handleError() {
+      this.error = null;
+    },
   },
 };
 </script>
