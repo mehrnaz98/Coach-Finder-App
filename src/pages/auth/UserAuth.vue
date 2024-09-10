@@ -63,13 +63,17 @@ export default {
 
       this.isLoading = true;
 
-      if (this.mode === 'login') {
-        // ...
-      } else {
-        await this.$store.dispatch('signup', {
-          email: this.email,
-          password: this.password,
-        });
+      try {
+        if (this.mode === 'login') {
+          // ...
+        } else {
+          await this.$store.dispatch('signup', {
+            email: this.email,
+            password: this.password,
+          });
+        }
+      } catch (err) {
+        this.error = err.message || 'Failed to authentoicate, try later.';
       }
       this.isLoading = false;
     },
