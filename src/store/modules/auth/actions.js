@@ -1,7 +1,7 @@
 export default {
   async login(context, payload) {
     const response = await fetch(
-      'https://identitytoolkit.googleapis.com/v1/accounts:signInwithPassword?key=AIzaSyAl-kmtImlWFBQyKK_tGG3p6jIAY2LyRxs',
+      'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyAl-kmtImlWFBQyKK_tGG3p6jIAY2LyRxs',
       {
         method: 'POST',
         body: JSON.stringify({
