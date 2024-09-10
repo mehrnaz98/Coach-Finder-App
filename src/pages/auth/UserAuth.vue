@@ -78,15 +78,9 @@ export default {
 
       try {
         if (this.mode === 'login') {
-          await this.$store.dispatch('login', {
-            email: this.email,
-            password: this.password,
-          });
+          await this.$store.dispatch('login', actionPayload);
         } else {
-          await this.$store.dispatch('signup', {
-            email: this.email,
-            password: this.password,
-          });
+          await this.$store.dispatch('signup', actionPayload);
         }
       } catch (err) {
         this.error = err.message || 'Failed to authentoicate, try later.';
