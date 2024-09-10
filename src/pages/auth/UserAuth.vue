@@ -1,5 +1,8 @@
 <template>
   <div>
+    <base-dialog :show="!!error" title="An error occurred">
+      <p>{{ error }}</p>
+    </base-dialog>
     <base-dialog :show="isLoading" title="Authenticating..." fixed>
       <base-spinner></base-spinner>
     </base-dialog>
