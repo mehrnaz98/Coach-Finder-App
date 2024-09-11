@@ -7,6 +7,9 @@
         <li v-if="isLoggedIn">
           <router-link to="/requests">Requests</router-link>
         </li>
+        <li v-else>
+          <router-link to="/auth">Login</router-link>
+        </li>
       </ul>
     </nav>
   </header>
