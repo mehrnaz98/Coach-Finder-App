@@ -16,7 +16,7 @@
           >
           <base-button link to="/auth" v-if="!isLoggedIn">Login</base-button>
           <base-button
-            v-if="!isLoggedIn && !isCoach && !isLoading"
+            v-if="isLoggedIn && !isCoach && !isLoading"
             link
             to="/register"
           >
