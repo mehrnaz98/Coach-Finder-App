@@ -10,6 +10,16 @@
   </header>
 </template>
 
+<script>
+export default {
+  computed: {
+    isLoggedIn() {
+      return this.$store.getters.isAuthenticated;
+    },
+  },
+};
+</script>
+
 <style scoped>
 header {
   width: 100%;
