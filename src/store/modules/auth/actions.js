@@ -73,6 +73,8 @@ export default {
     localStorage.removeItem('token');
     localStorage.removeItem('userId');
 
+    clearTimeout(timer);
+
     context.commit('setUser', {
       userId: null,
       token: null,
