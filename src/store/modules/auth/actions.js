@@ -69,6 +69,10 @@ export default {
       return;
     }
 
+    timer = setTimeout(function () {
+      context.dispatch('logout');
+    }, expiresIn);
+
     if (token && userId) {
       context.commit('setUser', {
         token: token,
