@@ -72,6 +72,7 @@ export default {
   logout(context) {
     localStorage.removeItem('token');
     localStorage.removeItem('userId');
+    localStorage.removeItem('tokenExpiration');
 
     clearTimeout(timer);
 
