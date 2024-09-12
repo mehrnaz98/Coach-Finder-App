@@ -1,3 +1,5 @@
+let timer;
+
 export default {
   async login(context, payload) {
     return context.dispatch('auth', {
@@ -47,7 +49,7 @@ export default {
     localStorage.setItem('userId', responseData.localId);
     localStorage.setItem('tokenExpiration', expirationDate);
 
-    setTimeout(function () {
+    timer = setTimeout(function () {
       context.dispatch('logout');
     }, expiresIn);
 
