@@ -39,13 +39,17 @@ export default {
       );
       throw error;
     }
+
+    const expiresIn = +responseData.expiresIn * 1000;
+    const expirationDate = new Date().getTime() + expiresIn;
+
     localStorage.setItem('token', responseData.idToken);
     localStorage.setItem('userId', responseData.localId);
+    localStorage.setItem('tokenExpiration', expirationDate);
 
     context.commit('setUser', {
       token: responseData.idToken,
       userId: responseData.localId,
-      tokenExpiration: responseData.expiresIn,
     });
   },
   tryLogin(context) {
