@@ -50,7 +50,7 @@ export default {
     localStorage.setItem('tokenExpiration', expirationDate);
 
     timer = setTimeout(function () {
-      context.dispatch('logout');
+      context.dispatch('autoLogout');
     }, expiresIn);
 
     context.commit('setUser', {
