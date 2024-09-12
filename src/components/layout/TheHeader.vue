@@ -25,6 +25,11 @@ export default {
       return this.$store.getters.isAuthenticated;
     },
   },
+  methods: {
+    logout() {
+      this.$store.dispatch('logout');
+    },
+  },
 };
 </script>
 
