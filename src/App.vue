@@ -14,6 +14,11 @@ export default {
   components: {
     TheHeader,
   },
+  computed: {
+    didAutoLogout() {
+      this.$store.dispatch('tryLogin');
+    },
+  },
   created() {
     this.$store.dispatch('tryLogin');
   },
