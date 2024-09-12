@@ -1,7 +1,7 @@
 <template>
   <form @submit.prevent="submitForm">
     <div class="form-control" :class="{ invalid: !firstName.isValid }">
-      <label for="firstName">Firstname</label>
+      <label for="firstName">First Name</label>
       <input
         type="text"
         id="firstName"
@@ -11,7 +11,7 @@
       <p v-if="!firstName.isValid">First name must not be empty.</p>
     </div>
     <div class="form-control" :class="{ invalid: !lastName.isValid }">
-      <label for="lastName">Lastname</label>
+      <label for="lastName">Last Name</label>
       <input
         type="text"
         id="lastName"
