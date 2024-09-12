@@ -60,7 +60,6 @@ export default {
       context.commit('setUser', {
         token: token,
         userId: userId,
-        tokenExpiration: null,
       });
     }
   },
