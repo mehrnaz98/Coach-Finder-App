@@ -6,7 +6,7 @@ Start learning, growing, and achieving your goals today!
 
 ## Live Demo
 
-You can view the live version of this project here: [View on Netlify](https://splendid-kataifi-557127.netlify.app/coaches)
+You can view the live version of this project here: [View on Netlify](https://splendid-kataifi-557127.netlify.app/)
 
 ## Project Acknowledgment
 
