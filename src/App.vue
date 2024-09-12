@@ -16,7 +16,7 @@ export default {
   },
   computed: {
     didAutoLogout() {
-      this.$store.dispatch('tryLogin');
+      return this.$store.dispatch('tryLogin');
     },
   },
   created() {
