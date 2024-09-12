@@ -70,7 +70,7 @@ export default {
     }
 
     timer = setTimeout(function () {
-      context.dispatch('logout');
+      context.dispatch('autoLogout');
     }, expiresIn);
 
     if (token && userId) {
@@ -95,6 +95,6 @@ export default {
   },
   autoLogout(context) {
     context.dispatch('logout');
-    context.commit('didAutoLogout');
+    context.commit('setAutoLogout');
   },
 };
