@@ -2,15 +2,15 @@
   <base-card>
     <h2>Find Your Coach</h2>
     <span class="filter-option"
-      ><input type="checkbox" id="frontend" checked @change="setFilter" />
+      ><input type="checkbox" id="frontend" v-model="filters.frontend" @change="setFilter" />
       <label for="frontend">Frontend</label>
     </span>
     <span class="filter-option">
-      <input type="checkbox" id="backend" checked @change="setFilter" />
+      <input type="checkbox" id="backend" v-model="filters.backend" @change="setFilter" />
       <label for="backend">Backend</label>
     </span>
     <span class="filter-option"
-      ><input type="checkbox" id="career" checked @change="setFilter" />
+      ><input type="checkbox" id="career" v-model="filters.career" @change="setFilter" />
       <label for="career">Career</label>
     </span>
   </base-card>
@@ -18,7 +18,7 @@
 
 <script>
 export default {
-  emit: ['change-filter'],
+  emits: ['change-filter'],
   data() {
     return {
       filters: {
