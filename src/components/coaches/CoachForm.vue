@@ -55,8 +55,8 @@
       <div>
         <input
           type="checkbox"
-          id="Backend"
-          value="Backend"
+          id="backend"
+          value="backend"
           v-model="areas.val"
           @blur="clearValidity('areas')"
         />
